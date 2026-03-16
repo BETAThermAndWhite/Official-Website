@@ -1,0 +1,257 @@
+/*
+    * Template Name: BetaTherm
+    * Developer: Meriam Zouaoui
+    * Version: 0.1
+    * Date: 14-02-2026
+    * Description: A flat Templete For BetaTherm Company , Scripted By Html Css Js Bootstrap {Responsive - Dynamic}.
+*/
+
+/*General Style*/
+:root {
+    --main-color: #1F458F;
+    --sec-color: #15974B;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    direction: rtl;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--main-color), var(--sec-color));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    opacity: .7;
+}
+
+/*All Style*/
+.btns {
+    border: 1px solid var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: fit-content;
+}
+
+.btns:hover {
+    background-color: var(--sec-color);
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.title-card {
+    padding: 8px 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.title-card::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--main-color);
+    transform: skewX(10deg);
+}
+
+/*Navbar Style*/
+.navbar {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 2px 0px;
+    transition: padding .8s;
+}
+
+.nav-logo img {
+    width: 100px;
+}
+
+.nav-link {
+    transition: color .5s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--sec-color) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--main-color);
+}
+
+.navbar .navbar-toggler {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 0;
+    border-color: #ccc;
+}
+
+.navbar .navbar-toggler .down-up {
+    color: var(--main-color);
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/*Home Style*/
+.home-hero .home-title,
+.home-hero p,
+.home-hero .btns {
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.home-hero {
+    background: linear-gradient(45deg,
+            rgba(31, 69, 143, 0.85),
+            rgba(21, 151, 75, 0.30)),
+        url('waterpipe.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.home-hero .home-title{
+    font-family: sans-serif;
+}
+
+.home-hero .hero-btn {
+    background-color: var(--main-color);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.home-hero .hero-btn:hover {
+    opacity: .8;
+}
+
+/*Reviews Style*/
+.reviews .progress {
+    height: auto;
+    background-color: #ccc;
+}
+
+.reviews .progress .progress-bar {
+    padding: 2px;
+    background: linear-gradient(90deg, var(--main-color), var(--sec-color));
+}
+
+.reviews .progress .progress-bar.progress-bar-one {
+    width: 80% !important;
+}
+
+.reviews .progress .progress-bar.progress-bar-two {
+    width: 85% !important;
+}
+
+.reviews .progress .progress-bar.progress-bar-three {
+    width: 75% !important;
+}
+
+.reviews .progress .progress-bar.progress-bar-four {
+    width: 70% !important;
+}
+
+/*Branches Style*/
+.branches-img img {
+    width: 150px;
+}
+
+/*Blog Style*/
+
+.type-label {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    color: var(--main-color);
+}
+
+.type-label::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: var(--sec-color);
+    border-radius: 4px;
+}
+
+.blog .card {
+    transition: border .8s, box-shadow .8s;
+    border-color: transparent !important;
+    height: 650px;
+}
+
+.blog .card:hover {
+    box-shadow: none !important;
+    border-color: #ccc !important;
+}
+
+.blog .card .card-cover {
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    transition: top .8s;
+}
+
+.blog .card:hover .card-cover {
+    top: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/*Contact Style*/
+.contact-content {
+    background-image: url("bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.contact-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000a8;
+    z-index: 0;
+}
+
+.contact-content>div {
+    z-index: 1;
+}
+
+.contact-content p {
+    font-size: .9rem;
+}
+
+/*Footer Style*/
+.footer .logo-img {
+    width: 150px;
+}
+
+
+.footer .copyright {
+    border-top: 1px solid var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .home-hero {
+        padding-top: 3rem;
+    }
+}
